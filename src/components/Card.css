@@ -1,0 +1,35 @@
+.card {
+  width: 250px;
+  height: 150px;
+  border-radius: 16px;
+  border: 2px solid #ffffff65;
+  background-color: #ffffff44;
+  backdrop-filter: blur(2000px);
+  padding: 12px;
+}
+
+.card-name {
+  font-size: 23px;
+  color: #192841;
+  font-weight: 500;
+}
+
+.card-img {
+  height: 64px;
+  width: auto;
+  margin: 5px 0;
+}
+
+.card-temp {
+  font-size: 20px;
+  font-weight: 600;
+  color: #192841;
+}
+
+.card-temp sup {
+  font-size: 6px;
+}
+
+.card-temp span {
+  font-size: 14px;
+}
