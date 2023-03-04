@@ -46,7 +46,9 @@ img {
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  height: 100%;
   margin: 0;
   padding: 0;
   background: linear-gradient(90deg, #f8b77f 50%, #252e3f 50%);

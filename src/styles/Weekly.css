@@ -1,0 +1,45 @@
+.weekly-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.weekly-location {
+  font-size: 26px;
+  color: #192841;
+  padding: 30px 40px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 25px 25px;
+  background-image: url("../assets/imgs/location.png");
+  text-transform: capitalize;
+}
+
+.weekly-link {
+  font-size: 24px;
+  color: #ffcc00;
+  font-weight: 400;
+  padding-top: 38px;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 4px;
+}
+
+.weekly-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #ffcc00;
+  bottom: 0;
+  left: -100%;
+  transition: 0.3s all cubic-bezier(1,1,.27,.98);
+}
+.weekly-link:hover:after {
+    content: "";
+  position: absolute;
+  left: 0%;
+}

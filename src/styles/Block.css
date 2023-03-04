@@ -1,11 +1,12 @@
 .block {
-  max-width: 1300px;
+  max-width: 100%;
   width: 100%;
-  max-height: 660px;
+  min-height: 100vh;
+  max-height: 100vh;
   height: 100%;
-  border-radius: 45px;
+  /* border-radius: 45px; */
   background-repeat: no-repeat;
-  background-position: bottom -100px center;
+  background-position: bottom -50px center;
   background-size: cover;
   background-image: url("../assets/imgs/snow-bg.jpg");
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -14,10 +15,11 @@
 .box {
   border-radius: inherit;
   background-color: #d1d1d145;
-  -webkit-backdrop-filter: blur(0.1px);
-  backdrop-filter: blur(0.1px);
+  -webkit-backdrop-filter: blur(0.3px);
+  backdrop-filter: blur(0.3px);
   padding: 25px 45px;
   width: 100%;
+  overflow-y: auto;
   height: 100%;
 }
 
@@ -81,8 +83,8 @@
 .location-box {
   display: flex;
   justify-content: space-between;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 50px;
+  padding-bottom: 25px;
 }
 
 .location-img {
@@ -176,4 +178,5 @@
   align-items: center;
   justify-content: space-around;
   padding-top: 25px;
+  flex-wrap: wrap;
 }

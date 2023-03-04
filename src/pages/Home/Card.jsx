@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import "./Card.css";
+import "../../styles/Card.css";
 
 const Card = ({location}) => {
 
@@ -12,7 +12,7 @@ const Card = ({location}) => {
           `https://api.weatherapi.com/v1/current.json?key=7c57017c6de44027803111521230303&q=${location}`
         )
         .then((data) => setWeather(data.data));
-    }, []);
+    }, [location]);
 
   return (
     <div className="card">
@@ -25,7 +25,12 @@ const Card = ({location}) => {
       <p className="card-temp">
         {weather.current?.temp_c}
         <sup> o</sup>
-        <span>C {weather.current?.condition.text}</span>
+        <span>
+          C{" "}
+          {weather.current?.condition.text.length > 23
+            ? weather.current?.condition.text.slice(0, 23) + "..."
+            : weather.current?.condition.text}
+        </span>
       </p>
     </div>
   );

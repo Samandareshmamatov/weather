@@ -33,3 +33,16 @@
 .card-temp span {
   font-size: 14px;
 }
+
+.card p span {
+  font-size: 10px;
+}
+
+.card p sup {
+  font-size: 6px;
+}
+
+.card p {
+  font-size: 16px;
+  padding-top: 4px;
+}
