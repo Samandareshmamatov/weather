@@ -5,8 +5,8 @@ const WeeklyCard = ({data}) => {
   return (
     <div className="card">
       <h3>{data?.date}</h3>
-      <p>Day : {data?.day.maxtemp_c}<sup> o</sup><span>C</span></p>
-      <p>Night : {data?.day.mintemp_c}<sup> o</sup><span>C</span></p>
+      <p>Day : {Number(data?.day.maxtemp_c) - 2}-{data?.day.maxtemp_c}<sup> o</sup><span>C</span></p>
+      <p>Night : {Number(data?.day.mintemp_c) + 2}+{data?.day.mintemp_c}<sup> o</sup><span>C</span></p>
       <img src={data?.day.condition.icon} alt="icon weather" />
     </div>
   );
