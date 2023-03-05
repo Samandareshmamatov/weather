@@ -6,16 +6,16 @@ const WeeklyCard = ({data}) => {
     <div className="card">
       <h3>{data?.date}</h3>
       <p>
-        Day : {Number(data?.day.maxtemp_c) - 2}
+        Day : {Math.floor(Number(data?.day.maxtemp_c) - 3)}
         <sup> o</sup>
-        <span>C</span> -{data?.day.maxtemp_c}
+        <span>C</span> - {data?.day.maxtemp_c}
         <sup> o</sup>
         <span>C</span>
       </p>
       <p>
-        Night : {Number(data?.day.mintemp_c) + 2}
+        Night : {Math.ceil(Number(data?.day.mintemp_c) + 3)}
         <sup> o</sup>
-        <span>C</span> -{data?.day.mintemp_c}
+        <span>C</span> - {data?.day.mintemp_c}
         <sup> o</sup>
         <span>C</span>
       </p>
