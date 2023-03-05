@@ -12,7 +12,7 @@ const Weekly = ({ location }) => {
   React.useEffect(() => {
     axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=c7eac69580114e9ea9e104643230503&q=${location},${location}&days=7`
+        `https://api.weatherapi.com/v1/forecast.json?key=c7eac69580114e9ea9e104643230503&q=${location},${location}&days=7`
       )
       .then((data) => setWeather(data.data.forecast.forecastday)).catch((error) => setError(error.message));
   }, [location]);
