@@ -21,10 +21,10 @@ const Weekly = ({ location }) => {
     <div className="block">
       <div className="box">
         <h1 className="title">Weather App</h1>
-        {loading ? (
+        {!weather ? (
           <>
-          <Loader />
-          <p>axcsfscdvfbgtnytbrgffgrtrgefveg</p>
+            <Loader />
+            <p>Loading data...</p>
           </>
         ) : (
           <>
