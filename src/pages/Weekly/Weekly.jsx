@@ -7,15 +7,14 @@ import Loader from "../../components/Loader";
 
 const Weekly = ({ location }) => {
   const [weather, setWeather] = React.useState([]);
-  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState("");
 
   React.useEffect(() => {
     axios
       .get(
         `http://api.weatherapi.com/v1/forecast.json?key=c7eac69580114e9ea9e104643230503&q=${location},${location}&days=7`
       )
-      .then((data) => setWeather(data.data.forecast.forecastday));
-      setLoading(false);
+      .then((data) => setWeather(data.data.forecast.forecastday)).catch((error) => setError(error.message));
   }, [location]);
   return (
     <div className="block">
@@ -24,7 +23,7 @@ const Weekly = ({ location }) => {
         {!weather ? (
           <>
             <Loader />
-            <p>Loading data...</p>
+            <p>{error}</p>
           </>
         ) : (
           <>
