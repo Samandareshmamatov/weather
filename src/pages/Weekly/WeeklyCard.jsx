@@ -13,9 +13,8 @@ const WeeklyCard = ({data}) => {
         <span>C</span>
       </p>
       <p>
-        Night : {Math.ceil(Number(data?.day.mintemp_c) + 3)}
-        <sup> o</sup>
-        <span>C</span> - {data?.day.mintemp_c}
+        Night : {data?.day.mintemp_c}<sup> o</sup>
+        <span>C</span> - {Math.ceil(Number(data?.day.mintemp_c) + 3)}
         <sup> o</sup>
         <span>C</span>
       </p>
