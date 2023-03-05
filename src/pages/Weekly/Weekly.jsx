@@ -37,7 +37,7 @@ const Weekly = ({ location }) => {
           </>
         )}
         <Link className="weekly-link" to="/">
-          Home
+          Home Page
         </Link>
       </div>
     </div>
