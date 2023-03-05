@@ -9,7 +9,7 @@ const Card = ({location}) => {
     React.useEffect(() => {
       axios
         .get(
-          `https://api.weatherapi.com/v1/current.json?key=7c57017c6de44027803111521230303&q=${location}`
+          `https://api.weatherapi.com/v1/current.json?key=c7eac69580114e9ea9e104643230503&q=${location}`
         )
         .then((data) => setWeather(data.data));
     }, [location]);
